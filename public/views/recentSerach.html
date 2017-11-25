@@ -1,0 +1,28 @@
+
+
+    <span ng-hide="resultArray.length">No contact</span>
+    
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-1 " > 
+                <h4> Recently searched keyword</h4>     
+                <ul ng-repeat="result in resultArray">
+                    <!-- Recently searcehed keywords -->
+                    <a  href="#"><li> {{result.keyword }}</li></a>
+                   <!-- <prev> {{result.imagepath |json}}</prev>  -->
+                </ul> 
+                
+        </div>
+    </div>  
+    
+    
+    <!-- to show the path of iamges stored in hdd -->
+    <div class="row">
+            <div class="col-sm-4 col-sm-offset-1 " > 
+                    <h5> Path of images saved locally </h5>     
+                    <ul ng-repeat="result in resultArray">
+                       <pre> {{result.imagepath}}</pre> 
+                    </ul>   
+            </div>
+    </div> 
+</div>
